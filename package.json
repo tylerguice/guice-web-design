@@ -1,0 +1,10 @@
+{
+  "name": "guice-web-design",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Static marketing site for Guice Web Design.",
+  "scripts": {
+    "dev": "python3 -m http.server 5173",
+    "start": "python3 -m http.server 5173"
+  }
+}
