@@ -99,10 +99,42 @@ textarea {
 .brand {
   display: inline-flex;
   align-items: center;
+  gap: 8px;
   color: var(--text);
   font-weight: 800;
   letter-spacing: 0;
   text-decoration: none;
+}
+
+.brand-mark {
+  width: 24px;
+  height: 47px;
+  display: flex;
+  align-items: stretch;
+  gap: 4px;
+  flex: 0 0 auto;
+  transform: translateY(2px);
+}
+
+.brand-mark span {
+  display: block;
+  border-radius: 0;
+  box-shadow: 0 0 16px rgba(var(--accent-rgb), 0.18);
+}
+
+.brand-mark span:nth-child(1) {
+  width: 2px;
+  background: #159784;
+}
+
+.brand-mark span:nth-child(2) {
+  width: 5px;
+  background: var(--accent);
+}
+
+.brand-mark span:nth-child(3) {
+  width: 8px;
+  background: #65f1df;
 }
 
 .brand-logo {
@@ -117,14 +149,14 @@ textarea {
   justify-self: start;
   color: var(--text);
   font-family: Manrope, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: 30px;
+  font-size: 34px;
   font-weight: 800;
-  letter-spacing: 0.08em;
+  letter-spacing: -0.04em;
 }
 
 .brand-logo-sub {
   width: max-content;
-  color: var(--accent);
+  color: #65f1df;
   font-family: Manrope, Inter, Arial, sans-serif;
   font-size: 12px;
   font-weight: 800;
@@ -900,6 +932,26 @@ h3 {
 
   .brand {
     max-width: 190px;
+    gap: 7px;
+  }
+
+  .brand-mark {
+    width: 22px;
+    height: 44px;
+    gap: 3px;
+    transform: translateY(2px);
+  }
+
+  .brand-mark span:nth-child(1) {
+    width: 2px;
+  }
+
+  .brand-mark span:nth-child(2) {
+    width: 4px;
+  }
+
+  .brand-mark span:nth-child(3) {
+    width: 7px;
   }
 
   .brand-logo {
@@ -907,7 +959,7 @@ h3 {
   }
 
   .brand-logo-main {
-    font-size: 27px;
+    font-size: 31px;
   }
 
   .brand-logo-sub {
