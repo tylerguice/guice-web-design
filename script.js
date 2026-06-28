@@ -35,20 +35,3 @@ document.querySelectorAll('a[href="#top"]').forEach((link) => {
     history.replaceState(null, "", window.location.pathname + window.location.search);
   });
 });
-
-const form = document.querySelector("#contact-form");
-
-if (form) {
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
-
-    form.innerHTML = `
-      <div class="form-success">
-        <div class="success-mark">✓</div>
-        <h3>Thanks, message ready.</h3>
-        <p>I still need to connect this form to an email service. For now, email me directly at hello@guicewebdesign.com.</p>
-        <a class="button button-primary" href="mailto:hello@guicewebdesign.com">Email Guice Web Design</a>
-      </div>
-    `;
-  });
-}
