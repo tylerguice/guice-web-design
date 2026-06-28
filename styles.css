@@ -974,10 +974,6 @@ h3 {
   gap: 16px;
 }
 
-.contact-form input[name="_honey"] {
-  display: none;
-}
-
 .contact-form label {
   display: block;
   margin-bottom: 7px;
