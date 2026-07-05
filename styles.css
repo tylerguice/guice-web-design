@@ -869,14 +869,18 @@ h3 {
 
 .example-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 22px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  align-items: stretch;
 }
 
 .example-card {
   overflow: hidden;
   color: inherit;
   text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
   transition:
     transform 160ms ease,
     border-color 160ms ease;
@@ -888,11 +892,14 @@ h3 {
 }
 
 .example-card > div:last-child {
-  padding: 22px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 26px 24px 28px;
 }
 
 .placeholder {
-  height: 172px;
+  height: 240px;
   display: grid;
   place-items: center;
   border-bottom: 1px solid rgba(255, 255, 255, 0.07);
@@ -902,20 +909,38 @@ h3 {
   font-size: 12px;
 }
 
-.placeholder-lawn {
-  background:
-    linear-gradient(135deg, rgba(14, 22, 25, 0.42), rgba(14, 22, 25, 0.12)),
-    repeating-linear-gradient(96deg, #2f7a45 0 18px, #3f9657 18px 36px);
-  color: #eaffef;
+.example-media {
+  overflow: hidden;
+  height: 240px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  background: #0b1215;
+}
+
+.example-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 220ms ease;
+}
+
+.example-card:hover .example-thumb {
+  transform: scale(1.025);
 }
 
 .example-card .card-kicker {
-  margin-bottom: 8px;
+  margin-bottom: 12px;
   color: var(--accent);
+  font-size: 13px;
 }
 
 .example-card h3 {
-  font-size: 20px;
+  margin-bottom: 14px;
+  font-size: 24px;
+}
+
+.example-card p:not(.card-kicker) {
+  margin-bottom: 28px;
 }
 
 .tag {
@@ -933,6 +958,17 @@ h3 {
   border-color: rgba(var(--accent-rgb), 0.32);
   background: rgba(var(--accent-rgb), 0.08);
   color: var(--accent);
+}
+
+.example-card .tag {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+@media (max-width: 980px) {
+  .example-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 .process-grid {
@@ -1182,6 +1218,11 @@ h3 {
   .pricing-grid,
   .example-grid {
     grid-template-columns: 1fr;
+  }
+
+  .placeholder,
+  .example-media {
+    height: 220px;
   }
 
   .price-card,
