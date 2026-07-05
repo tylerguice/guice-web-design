@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bluewell Pool Co. | Pool Service Demo</title>
+    <meta
+      name="description"
+      content="A demo website for a local pool service company with maintenance plans, service areas, reviews, and a quote form."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="bluewell.css" />
+  </head>
+  <body>
+    <div class="bw-page">
+      <aside class="bw-announcement" data-announcement>
+        <div class="bw-container bw-announcement-inner">
+          <span>
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path
+                d="M12 2v2M12 20v2M4 12H2M22 12h-2M5 5l1.4 1.4M17.6 17.6 19 19M19 5l-1.4 1.4M6.4 17.6 5 19"
+              ></path>
+            </svg>
+            Summer pool openings are booking fast - reserve your spot for the
+            season.
+          </span>
+          <a href="#contact">Book now</a>
+          <button type="button" aria-label="Dismiss" data-announcement-close>
+            &times;
+          </button>
+        </div>
+      </aside>
+
+      <header class="bw-header">
+        <div class="bw-container bw-header-inner">
+          <a class="bw-logo" href="#top" aria-label="Bluewell Pool Co. home">
+            <span class="bw-logo-mark">
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <path
+                  d="M12 3s6 6.4 6 10.5A6 6 0 0 1 6 13.5C6 9.4 12 3 12 3z"
+                ></path>
+              </svg>
+            </span>
+            <span class="bw-logo-text">
+              <span>Blue<span>well</span></span>
+              <small>Pool Co.</small>
+            </span>
+          </a>
+
+          <nav class="bw-nav" aria-label="Primary">
+            <a href="#services">Services</a>
+            <a href="#process">How it works</a>
+            <a href="#plans">Plans</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#areas">Areas</a>
+          </nav>
+
+          <div class="bw-header-actions">
+            <a class="bw-phone" href="tel:+16025550148">
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <path
+                  d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"
+                ></path>
+              </svg>
+              (602) 555-0148
+            </a>
+            <a class="bw-button bw-button-small" href="#contact">Get a quote</a>
+          </div>
+
+          <button class="bw-menu-toggle" type="button" aria-label="Menu" data-menu-toggle>
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <path d="M4 7h16M4 12h16M4 17h16"></path>
+            </svg>
+          </button>
+        </div>
+
+        <nav class="bw-mobile-nav" aria-label="Mobile primary" data-mobile-menu>
+          <a href="#services">Services</a>
+          <a href="#process">How it works</a>
+          <a href="#plans">Plans</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#areas">Areas</a>
+          <a class="bw-button" href="#contact">Get a free quote</a>
+          <a class="bw-mobile-phone" href="tel:+16025550148">(602) 555-0148</a>
+        </nav>
+      </header>
+
+      <main>
+        <section id="top" class="bw-hero">
+          <div class="bw-hero-glow bw-hero-glow-one"></div>
+          <div class="bw-hero-glow bw-hero-glow-two"></div>
+          <div class="bw-container bw-hero-grid">
+            <div class="bw-hero-copy">
+              <p class="bw-pill">
+                <span></span>
+                Licensed &amp; insured - serving the East Valley since 2011
+              </p>
+              <h1>A pool that's always <span>ready to swim.</span></h1>
+              <p>
+                Weekly cleaning, chemical balancing, and equipment repair from
+                a technician who knows your backyard by name. Crystal-clear
+                water, guaranteed - or the next visit's on us.
+              </p>
+              <div class="bw-hero-actions">
+                <a class="bw-button" href="#contact">
+                  Get a free quote
+                  <svg aria-hidden="true" viewBox="0 0 24 24">
+                    <path d="M5 12h14M13 6l6 6-6 6"></path>
+                  </svg>
+                </a>
+                <a class="bw-button bw-button-secondary" href="#plans">
+                  See maintenance plans
+                </a>
+              </div>
+              <div class="bw-rating">
+                <span aria-label="5 star rating">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <strong>4.9/5</strong>
+                <small>from 340+ homeowner reviews</small>
+              </div>
+            </div>
+            <div class="bw-hero-image">
+              <img
+                src="assets/bluewell-hero-umbrella.jpg"
+                alt="Sparkling residential backyard pool with navy umbrella"
+              />
+            </div>
+          </div>
+        </section>
+
+        <section class="bw-trust">
+          <div class="bw-container bw-trust-grid">
+            <div>
+              <strong>4.9&#9733;</strong>
+              <span>340+ Google reviews</span>
+            </div>
+            <div>
+              <strong>14 yrs</strong>
+              <span>serving the East Valley</span>
+            </div>
+            <div>
+              <strong>2,000+</strong>
+              <span>backyards serviced</span>
+            </div>
+            <div>
+              <strong>Licensed</strong>
+              <span>bonded &amp; insured</span>
+            </div>
+          </div>
+        </section>
+
+        <section id="services" class="bw-section bw-services">
+          <div class="bw-container">
+            <div class="bw-section-heading">
+              <p class="bw-kicker">What we do</p>
+              <h2>Everything your pool needs, handled by one team.</h2>
+              <p>
+                From routine upkeep to emergency repairs, we keep your water
+                safe, balanced, and swim-ready all season long.
+              </p>
+            </div>
+
+            <article class="bw-feature-card">
+              <div class="bw-feature-image">
+                <img src="assets/bluewell-lap-pool.jpg" alt="Long backyard lap pool" />
+              </div>
+              <div class="bw-feature-copy">
+                <p>Our signature service</p>
+                <h3>Weekly Maintenance</h3>
+                <p>
+                  A dedicated technician visits every week to skim, brush,
+                  vacuum, empty the baskets, test and dose your water, and
+                  inspect the equipment. You get a photo report on your phone
+                  after every single visit.
+                </p>
+                <div class="bw-chip-row">
+                  <span>Photo reports</span>
+                  <span>Same tech each week</span>
+                  <span>No long contracts</span>
+                </div>
+              </div>
+            </article>
+
+            <div class="bw-service-grid">
+              <article class="bw-service-card">
+                <div>
+                  <span class="bw-icon">
+                    <svg aria-hidden="true" viewBox="0 0 24 24">
+                      <path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3z"></path>
+                      <path d="m18.5 15.5.7 2 2 .7-2 .7-.7 2-.7-2-2-.7 2-.7z"></path>
+                    </svg>
+                  </span>
+                  <small>02</small>
+                </div>
+                <h3>Cleaning &amp; Skimming</h3>
+                <p>
+                  Surface skimming, wall brushing, tile scrubbing, and
+                  vacuuming - leaves, algae, and debris gone.
+                </p>
+              </article>
+              <article class="bw-service-card">
+                <div>
+                  <span class="bw-icon">
+                    <svg aria-hidden="true" viewBox="0 0 24 24">
+                      <path d="M12 3s6 6.4 6 10.5A6 6 0 0 1 6 13.5C6 9.4 12 3 12 3z"></path>
+                      <path d="M9.6 14.2a2.4 2.4 0 0 0 2.4 2.3"></path>
+                    </svg>
+                  </span>
+                  <small>03</small>
+                </div>
+                <h3>Chemical Balancing</h3>
+                <p>
+                  Lab-precise testing for pH, chlorine, alkalinity, and
+                  stabilizer - safe, gentle, swim-ready water.
+                </p>
+              </article>
+              <article class="bw-service-card">
+                <div>
+                  <span class="bw-icon">
+                    <svg aria-hidden="true" viewBox="0 0 24 24">
+                      <path d="M4 7h9M19 7h1"></path>
+                      <circle cx="15.5" cy="7" r="2.3"></circle>
+                      <path d="M4 17h5M15 17h5"></path>
+                      <circle cx="11.5" cy="17" r="2.3"></circle>
+                    </svg>
+                  </span>
+                  <small>04</small>
+                </div>
+                <h3>Equipment Repair</h3>
+                <p>
+                  Pumps, filters, heaters, salt systems, and automation -
+                  diagnosed, repaired, and tuned by pros.
+                </p>
+              </article>
+              <article class="bw-service-card">
+                <div>
+                  <span class="bw-icon">
+                    <svg aria-hidden="true" viewBox="0 0 24 24">
+                      <circle cx="12" cy="12" r="4"></circle>
+                      <path
+                        d="M12 2v2M12 20v2M4 12H2M22 12h-2M5 5l1.4 1.4M17.6 17.6 19 19M19 5l-1.4 1.4M6.4 17.6 5 19"
+                      ></path>
+                    </svg>
+                  </span>
+                  <small>05</small>
+                </div>
+                <h3>Openings &amp; Closings</h3>
+                <p>
+                  Seasonal open-ups and winterizing done right - covers, lines,
+                  and startup chemistry included.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section id="process" class="bw-section bw-process">
+          <div class="bw-container">
+            <div class="bw-section-heading bw-center">
+              <p class="bw-kicker bw-kicker-light">How it works</p>
+              <h2>Getting started takes one phone call.</h2>
+              <p>
+                Three simple steps between you and a pool you never have to
+                think about again.
+              </p>
+            </div>
+            <div class="bw-process-grid">
+              <article>
+                <span>1</span>
+                <h3>Free on-site assessment</h3>
+                <p>
+                  We walk your pool, test the water, and price everything up
+                  front. No obligation, no surprises.
+                </p>
+              </article>
+              <article>
+                <span>2</span>
+                <h3>Your custom care plan</h3>
+                <p>
+                  Weekly, biweekly, or seasonal - we match the plan to your
+                  pool, your usage, and your budget.
+                </p>
+              </article>
+              <article class="bw-process-dark">
+                <span>3</span>
+                <h3>Sit back and enjoy</h3>
+                <p>
+                  Same technician every visit, a photo report each time, and
+                  our crystal-clear guarantee on every drop.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section id="plans" class="bw-section bw-plans">
+          <div class="bw-container">
+            <div class="bw-section-heading bw-center">
+              <p class="bw-kicker">Maintenance plans</p>
+              <h2>Simple, honest pricing.</h2>
+              <p>
+                Flat monthly rates, no hidden fees, cancel anytime. Chemicals
+                always included.
+              </p>
+            </div>
+
+            <div class="bw-plan-grid">
+              <article class="bw-plan-card">
+                <h3>Essential</h3>
+                <p>Biweekly visits for lightly-used pools.</p>
+                <div class="bw-price"><strong>$139</strong><span>/mo</span></div>
+                <small>per month - cancel anytime</small>
+                <ul>
+                  <li>Skim, brush &amp; empty baskets</li>
+                  <li>Water test &amp; basic chemicals</li>
+                  <li>Filter pressure check</li>
+                  <li>Photo report every visit</li>
+                </ul>
+              </article>
+
+              <article class="bw-plan-card bw-plan-featured">
+                <span class="bw-popular">Most popular</span>
+                <h3>Complete</h3>
+                <p>Weekly care for the way pools should look.</p>
+                <div class="bw-price"><strong>$199</strong><span>/mo</span></div>
+                <small>per month - cancel anytime</small>
+                <ul>
+                  <li>Everything in Essential, weekly</li>
+                  <li>Full chemical balancing</li>
+                  <li>Vacuum &amp; filter backwash</li>
+                  <li>Priority scheduling</li>
+                </ul>
+              </article>
+
+              <article class="bw-plan-card">
+                <h3>Premier</h3>
+                <p>White-glove care, equipment included.</p>
+                <div class="bw-price"><strong>$289</strong><span>/mo</span></div>
+                <small>per month - cancel anytime</small>
+                <ul>
+                  <li>Everything in Complete</li>
+                  <li>Equipment tune-ups &amp; filter cleans</li>
+                  <li>Seasonal open &amp; close included</li>
+                  <li>24/7 priority support line</li>
+                </ul>
+              </article>
+            </div>
+            <p class="bw-plan-note">
+              Prices for standard residential pools up to 20,000 gallons.
+              Larger pools &amp; spas quoted on-site.
+            </p>
+          </div>
+        </section>
+
+        <section id="results" class="bw-section bw-results">
+          <div class="bw-container bw-results-inner">
+            <div class="bw-section-heading bw-center">
+              <p class="bw-kicker bw-kicker-light">The difference</p>
+              <h2>Water worth coming home to.</h2>
+              <p>
+                Balanced, filtered, and spotless every week - the kind of clear
+                you can see straight to the bottom of.
+              </p>
+            </div>
+            <div class="bw-results-image">
+              <img
+                src="assets/bluewell-lap-pool.jpg"
+                alt="Crystal-clear serviced backyard pool"
+              />
+            </div>
+            <div class="bw-result-stats">
+              <div><strong>4 days</strong><span>to swimmable</span></div>
+              <div><strong>2 weeks</strong><span>to crystal clear</span></div>
+              <div><strong>$0</strong><span>extra if it turns green again</span></div>
+            </div>
+          </div>
+        </section>
+
+        <section id="gallery" class="bw-section bw-gallery">
+          <div class="bw-container">
+            <div class="bw-gallery-heading">
+              <div>
+                <p class="bw-kicker">Recent work</p>
+                <h2>Backyards we keep swim-ready.</h2>
+              </div>
+              <a href="#contact">
+                Add yours to the list
+                <svg aria-hidden="true" viewBox="0 0 24 24">
+                  <path d="M5 12h14M13 6l6 6-6 6"></path>
+                </svg>
+              </a>
+            </div>
+            <div class="bw-gallery-grid">
+              <div class="bw-wide">
+                <img src="assets/bluewell-house-pool.jpg" alt="Backyard pool with stone patio" />
+              </div>
+              <div class="bw-tall bw-round-bottom">
+                <img src="assets/bluewell-pool-float.jpg" alt="Minimalist pool with float" />
+              </div>
+              <div class="bw-tall bw-round-top">
+                <img src="assets/bluewell-pool-dusk.jpg" alt="Pool at dusk with loungers" />
+              </div>
+              <div class="bw-wide">
+                <img src="assets/bluewell-community-pool.jpg" alt="Community pool" />
+              </div>
+              <div class="bw-tall bw-round-bottom">
+                <img src="assets/bluewell-pool-ladder.jpg" alt="Resort-style pool with ladder" />
+              </div>
+              <div class="bw-wide">
+                <img src="assets/bluewell-lap-pool.jpg" alt="Long lap pool" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="reviews" class="bw-section bw-reviews">
+          <div class="bw-container">
+            <div class="bw-section-heading bw-center">
+              <p class="bw-kicker bw-kicker-light">Reviews</p>
+              <h2>Neighbors who never skim again.</h2>
+            </div>
+            <div class="bw-review-grid">
+              <article>
+                <div class="bw-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p>
+                  "Our pool has never looked better. Same tech every week, and
+                  the photo report hits my phone before I'm even home from
+                  work. Worth every penny."
+                </p>
+                <footer><span>MR</span><strong>Marcus &amp; Dana R.</strong><small>Chandler, AZ</small></footer>
+              </article>
+              <article>
+                <div class="bw-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p>
+                  "We inherited a green mess when we bought the house. Bluewell
+                  had it swimmable in four days and spotless in two weeks.
+                  Genuinely impressive."
+                </p>
+                <footer><span>PS</span><strong>Priya S.</strong><small>Gilbert, AZ</small></footer>
+              </article>
+              <article>
+                <div class="bw-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p>
+                  "They caught a failing pump before it flooded the equipment
+                  pad. Honest, on time, and genuinely nice people to have in the
+                  backyard."
+                </p>
+                <footer><span>TH</span><strong>Tom H.</strong><small>Tempe, AZ</small></footer>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section id="areas" class="bw-section bw-areas">
+          <div class="bw-container bw-area-grid">
+            <div>
+              <p class="bw-kicker">Service area</p>
+              <h2>Proudly serving the East Valley.</h2>
+              <p>
+                Locally owned and operated, with routes across 14
+                neighborhoods. If you can see the mountains, we can probably
+                reach your backyard by next week.
+              </p>
+              <div class="bw-area-list">
+                <span>Scottsdale</span>
+                <span>Tempe</span>
+                <span>Chandler</span>
+                <span>Gilbert</span>
+                <span>Mesa</span>
+                <span>Queen Creek</span>
+                <span>Ahwatukee</span>
+                <span>Paradise Valley</span>
+                <span>Fountain Hills</span>
+                <span>+ more</span>
+              </div>
+            </div>
+            <div class="bw-area-image">
+              <img
+                src="assets/bluewell-house-pool.jpg"
+                alt="Residential home with pool in the East Valley"
+              />
+              <div>
+                <span class="bw-icon">
+                  <svg aria-hidden="true" viewBox="0 0 24 24">
+                    <path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </span>
+                <p><strong>14 neighborhoods</strong><small>same-week service</small></p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact" class="bw-section bw-contact">
+          <div class="bw-contact-glow"></div>
+          <div class="bw-container bw-contact-grid">
+            <div class="bw-contact-copy">
+              <p class="bw-kicker bw-kicker-dark">Free quote</p>
+              <h2>Ready for water you never have to worry about?</h2>
+              <p>
+                Tell us about your pool and we'll send a free, no-pressure
+                quote within one business day.
+              </p>
+              <div class="bw-contact-list">
+                <a href="tel:+16025550148">
+                  <span class="bw-icon">
+                    <svg aria-hidden="true" viewBox="0 0 24 24">
+                      <path
+                        d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"
+                      ></path>
+                    </svg>
+                  </span>
+                  <span><small>Call or text</small><strong>(602) 555-0148</strong></span>
+                </a>
+                <div>
+                  <span class="bw-icon">
+                    <svg aria-hidden="true" viewBox="0 0 24 24">
+                      <circle cx="12" cy="12" r="9"></circle>
+                      <path d="M12 7v5l3 2"></path>
+                    </svg>
+                  </span>
+                  <span><small>Hours</small><strong>Mon-Sat &middot; 7:00a - 6:00p</strong></span>
+                </div>
+                <div>
+                  <span class="bw-icon">
+                    <svg aria-hidden="true" viewBox="0 0 24 24">
+                      <path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6z"></path>
+                      <path d="M9 12l2 2 4-4"></path>
+                    </svg>
+                  </span>
+                  <span>
+                    <small>Peace of mind</small>
+                    <strong>Licensed &middot; Bonded &middot; Insured &middot; ROC #327140</strong>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <form class="bw-form" data-quote-form>
+              <div class="bw-form-success" data-form-success hidden>
+                <span class="bw-icon">
+                  <svg aria-hidden="true" viewBox="0 0 24 24">
+                    <path d="M20 6L9 17l-5-5"></path>
+                  </svg>
+                </span>
+                <h3>Request received!</h3>
+                <p>
+                  Thanks for reaching out. A Bluewell team member will call you
+                  within one business day to schedule your free assessment.
+                </p>
+              </div>
+              <div data-form-fields>
+                <h3>Request your free quote</h3>
+                <p>Takes about 60 seconds.</p>
+                <label>
+                  Full name
+                  <input name="name" placeholder="Jane Homeowner" />
+                </label>
+                <div class="bw-form-row">
+                  <label>
+                    Email
+                    <input name="email" type="email" placeholder="jane@email.com" />
+                  </label>
+                  <label>
+                    Phone
+                    <input name="phone" type="tel" placeholder="(602) 555-0000" />
+                  </label>
+                </div>
+                <label>
+                  Home address
+                  <input name="address" placeholder="123 Palm Court, Gilbert" />
+                </label>
+                <label>
+                  What do you need?
+                  <select name="service">
+                    <option>Weekly maintenance</option>
+                    <option>Biweekly maintenance</option>
+                    <option>Green pool recovery</option>
+                    <option>Equipment repair</option>
+                    <option>Seasonal opening / closing</option>
+                    <option>Something else</option>
+                  </select>
+                </label>
+                <label>
+                  Anything we should know? <span>(optional)</span>
+                  <textarea
+                    name="message"
+                    rows="3"
+                    placeholder="Pool size, current condition, gate code..."
+                  ></textarea>
+                </label>
+                <p class="bw-form-error" data-form-error hidden></p>
+                <button type="submit">Send my free quote request</button>
+                <small>No spam, ever. We'll only use your info to prepare your quote.</small>
+              </div>
+            </form>
+          </div>
+        </section>
+      </main>
+
+      <footer class="bw-footer">
+        <div class="bw-container bw-footer-grid">
+          <div class="bw-footer-brand">
+            <a class="bw-logo bw-logo-footer" href="#top">
+              <span class="bw-logo-mark">
+                <svg aria-hidden="true" viewBox="0 0 24 24">
+                  <path
+                    d="M12 3s6 6.4 6 10.5A6 6 0 0 1 6 13.5C6 9.4 12 3 12 3z"
+                  ></path>
+                </svg>
+              </span>
+              <span>Blue<span>well</span> <small>Pool Co.</small></span>
+            </a>
+            <p>
+              Crystal-clear pools and honest service for East Valley homeowners
+              since 2011.
+            </p>
+          </div>
+          <div>
+            <h3>Services</h3>
+            <a href="#services">Weekly maintenance</a>
+            <a href="#services">Chemical balancing</a>
+            <a href="#services">Equipment repair</a>
+            <a href="#services">Openings &amp; closings</a>
+          </div>
+          <div>
+            <h3>Company</h3>
+            <a href="#process">How it works</a>
+            <a href="#plans">Plans &amp; pricing</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#areas">Service area</a>
+          </div>
+          <div>
+            <h3>Get in touch</h3>
+            <a href="tel:+16025550148">(602) 555-0148</a>
+            <a href="mailto:hello@bluewellpools.com">hello@bluewellpools.com</a>
+            <span>Gilbert, AZ 85234</span>
+            <a class="bw-footer-quote" href="#contact">Get a free quote -></a>
+          </div>
+        </div>
+        <div class="bw-container bw-footer-bottom">
+          <span>&copy; 2026 Bluewell Pool Co. &middot; ROC #327140 &middot; All rights reserved.</span>
+          <div>
+            <a href="#top">Privacy</a>
+            <a href="#top">Terms</a>
+            <a href="#top">Accessibility</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="bluewell.js"></script>
+  </body>
+</html>
