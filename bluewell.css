@@ -288,7 +288,20 @@ a {
 .bw-hero {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(180deg, #eef7fb 0%, #f7fbfd 60%, #fff 100%);
+  background:
+    linear-gradient(90deg, rgb(6 26 43 / 88%) 0%, rgb(8 36 58 / 72%) 40%, rgb(8 36 58 / 22%) 100%),
+    linear-gradient(180deg, rgb(6 26 43 / 20%) 0%, rgb(6 26 43 / 72%) 100%),
+    url("assets/bluewell-water-hero-bg.jpg") center / cover no-repeat;
+}
+
+.bw-hero::after {
+  position: absolute;
+  inset: auto 0 0;
+  height: 160px;
+  background: linear-gradient(180deg, transparent, #08243a);
+  content: "";
+  opacity: 0.2;
+  pointer-events: none;
 }
 
 .bw-hero-glow {
@@ -302,7 +315,7 @@ a {
   right: -90px;
   width: 460px;
   height: 460px;
-  background: radial-gradient(circle, rgb(43 196 189 / 12%), transparent 70%);
+  background: radial-gradient(circle, rgb(43 196 189 / 20%), transparent 70%);
 }
 
 .bw-hero-glow-two {
@@ -310,11 +323,12 @@ a {
   left: -120px;
   width: 420px;
   height: 420px;
-  background: radial-gradient(circle, rgb(14 155 214 / 8%), transparent 70%);
+  background: radial-gradient(circle, rgb(14 155 214 / 18%), transparent 70%);
 }
 
 .bw-hero-grid {
   position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(330px, 0.9fr);
   align-items: center;
@@ -338,7 +352,7 @@ a {
 }
 
 .bw-pill {
-  background: #fff;
+  background: rgb(255 255 255 / 92%);
   padding: 8px 15px;
   box-shadow: 0 4px 14px -8px rgb(8 36 58 / 30%);
 }
@@ -366,7 +380,7 @@ a {
 .bw-hero h1 {
   max-width: 650px;
   margin-top: 22px;
-  color: #08243a;
+  color: #fff;
   font-size: clamp(42px, 6vw, 74px);
   font-weight: 800;
   letter-spacing: -0.03em;
@@ -374,13 +388,13 @@ a {
 }
 
 .bw-hero h1 span {
-  color: #0e9bd6;
+  color: #7bdcf8;
 }
 
 .bw-hero-copy > p:not(.bw-pill) {
   max-width: 520px;
   margin: 22px 0 0;
-  color: #46617a;
+  color: rgb(255 255 255 / 82%);
   font-size: clamp(17px, 1.4vw, 20px);
   line-height: 1.55;
 }
@@ -407,11 +421,12 @@ a {
 }
 
 .bw-rating strong {
+  color: #fff;
   font-weight: 700;
 }
 
 .bw-rating small {
-  color: #6b8194;
+  color: rgb(255 255 255 / 68%);
   font-size: 15px;
 }
 
@@ -434,8 +449,8 @@ a {
 }
 
 .bw-trust {
-  background: #08243a;
-  color: #fff;
+  background: #e9f4fa;
+  color: #08243a;
 }
 
 .bw-trust-grid {
@@ -447,7 +462,7 @@ a {
 }
 
 .bw-trust-grid div {
-  border-right: 1px solid rgb(255 255 255 / 14%);
+  border-right: 1px solid rgb(8 36 58 / 10%);
 }
 
 .bw-trust-grid div:last-child {
@@ -456,7 +471,7 @@ a {
 
 .bw-trust-grid strong {
   display: block;
-  color: #fff;
+  color: #08243a;
   font-family: "Bricolage Grotesque", system-ui, sans-serif;
   font-size: clamp(26px, 3vw, 34px);
   font-weight: 800;
@@ -470,7 +485,7 @@ a {
 .bw-trust-grid span {
   display: block;
   margin-top: 6px;
-  color: rgb(255 255 255 / 70%);
+  color: #5a7183;
   font-size: 13.5px;
 }
 
@@ -1552,7 +1567,7 @@ a {
 
   .bw-trust-grid div {
     border-right: 0;
-    border-bottom: 1px solid rgb(255 255 255 / 14%);
+    border-bottom: 1px solid rgb(8 36 58 / 10%);
     padding-bottom: 20px;
   }
 
