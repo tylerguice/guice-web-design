@@ -875,6 +875,8 @@ h3 {
 
 .example-card {
   overflow: hidden;
+  color: inherit;
+  text-decoration: none;
   transition:
     transform 160ms ease,
     border-color 160ms ease;
@@ -900,6 +902,13 @@ h3 {
   font-size: 12px;
 }
 
+.placeholder-lawn {
+  background:
+    linear-gradient(135deg, rgba(14, 22, 25, 0.42), rgba(14, 22, 25, 0.12)),
+    repeating-linear-gradient(96deg, #2f7a45 0 18px, #3f9657 18px 36px);
+  color: #eaffef;
+}
+
 .example-card .card-kicker {
   margin-bottom: 8px;
   color: var(--accent);
@@ -918,6 +927,12 @@ h3 {
   color: var(--muted-2);
   font-size: 14px;
   font-weight: 800;
+}
+
+.tag-live {
+  border-color: rgba(var(--accent-rgb), 0.32);
+  background: rgba(var(--accent-rgb), 0.08);
+  color: var(--accent);
 }
 
 .process-grid {
